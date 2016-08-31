@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="r4a-y7-6oc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Option Picker View Demo-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaY-vk-tqV">
+                                <rect key="frame" x="150" y="174" width="300" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="855-d4-nsJ"/>
+                                    <constraint firstAttribute="width" constant="300" id="M99-m1-eGa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <state key="normal" title="Please select option...">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showOptionButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t6U-X3-4wK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please tap on below button to display options in picker view." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xrp-f7-fjL">
+                                <rect key="frame" x="150" y="99" width="300" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Pst-hD-hv4"/>
+                                    <constraint firstAttribute="height" constant="60" id="iLK-tu-gja"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jaY-vk-tqV" firstAttribute="top" secondItem="Xrp-f7-fjL" secondAttribute="bottom" constant="15" id="3HJ-KM-akj"/>
+                            <constraint firstItem="Xrp-f7-fjL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5zd-Cg-fr1"/>
+                            <constraint firstItem="Xrp-f7-fjL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="35" id="CkC-zJ-l69"/>
+                            <constraint firstItem="jaY-vk-tqV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DPx-Xe-RsU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Option Picker View Demo" id="gDq-57-bQe"/>
+                    <connections>
+                        <outlet property="showOptionButton" destination="jaY-vk-tqV" id="LVu-Hy-VnB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1098" y="325"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Upl-ns-F09">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="r4a-y7-6oc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sat-WF-vze">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="P9Z-vR-xnm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vbq-hw-KDk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="286" y="985"/>
+        </scene>
+    </scenes>
+</document>
